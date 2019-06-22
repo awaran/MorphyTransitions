@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'MorphyTransitions_Example' do
+  pod 'MorphyTransitions', :path => '../'
+
+  target 'MorphyTransitions_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
