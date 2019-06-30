@@ -18,17 +18,17 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+This cocoapod adds a custom transition and tools that help with animations in autolayout with minimal lines of code.  Please see readme or instructions on how to use it.
                        DESC
 
   s.homepage         = 'https://github.com/awaran/MorphyTransitions'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'awaran' => 'arjay@photokeeper.com' }
+  s.author           = { 'awaran' => 'waran.arjay@gmail.com' }
   s.source           = { :git => 'https://github.com/awaran/MorphyTransitions.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '10.0'
 
   s.source_files = 'MorphyTransitions/Classes/**/*'
   

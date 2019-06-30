@@ -1,0 +1,16 @@
+PODS:
+  - MorphyTransitions (0.1.0)
+
+DEPENDENCIES:
+  - MorphyTransitions (from `../`)
+
+EXTERNAL SOURCES:
+  MorphyTransitions:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MorphyTransitions: e8faf7b8ddf93ad15959ba6cc6db7dc98ca60009
+
+PODFILE CHECKSUM: 54f78c0809391e103ed475b963e038eea9a0b0f2
+
+COCOAPODS: 1.7.1

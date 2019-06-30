@@ -1,0 +1,6 @@
+framework module MorphyTransitions {
+  umbrella header "MorphyTransitions-umbrella.h"
+
+  export *
+  module * { export * }
+}

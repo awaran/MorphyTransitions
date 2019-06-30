@@ -1,0 +1,783 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04BA710C0296C4000E60DE0A3F6E52DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		0918F55746C6ED1EC9E995BDF6811BFA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		50D00B5622BEE1B700DF6FD9 /* UIView+Trans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D00B5422BEE1B600DF6FD9 /* UIView+Trans.swift */; };
+		50D00B5722BEE1B700DF6FD9 /* TransNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D00B5522BEE1B700DF6FD9 /* TransNavController.swift */; };
+		6F46DE4C6D0850E82DB1E2505A4FF7B6 /* Pods-MorphyTransitions_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D9CA277755D505EBC8DCBEEF2A7412 /* Pods-MorphyTransitions_Example-dummy.m */; };
+		7694B3EB248B0EC676D0FCE743598C40 /* Pods-MorphyTransitions_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 92931EF478586DF1DE547B053358E183 /* Pods-MorphyTransitions_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		86EFC95D91098985F5181320370558D2 /* MorphyTransitions-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 92D92BA890C3619E33E5B866B5EE32B9 /* MorphyTransitions-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D990B1CA15DC3A05327D55DCED1AB78B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		E0DF58AC9565CEEDEE909F6AFB52ED8A /* Pods-MorphyTransitions_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 61CF309D0A5E241573AB0F6325CC3C8D /* Pods-MorphyTransitions_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ED2BA66C24B1A17727342006CE93841D /* MorphyTransitions-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F69C19724EC707A80C2E4A63C7BC40 /* MorphyTransitions-dummy.m */; };
+		F04FBF812618800092843CB30F16B27E /* Pods-MorphyTransitions_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BB16803815FBFF9E4EB074BED962C3 /* Pods-MorphyTransitions_Tests-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A44CCBB83C7763B9ED479FF05F921F24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF69D69AF524BEC94C0C2A73B8C77093;
+			remoteInfo = MorphyTransitions;
+		};
+		D37006E1B630623CFCD13C019DECCFFB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6180F442342F6FD1F1F35914A5FC0DD3;
+			remoteInfo = "Pods-MorphyTransitions_Example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01D9CA277755D505EBC8DCBEEF2A7412 /* Pods-MorphyTransitions_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MorphyTransitions_Example-dummy.m"; sourceTree = "<group>"; };
+		224F115B3A006C2A93C64C6BA35707C2 /* Pods-MorphyTransitions_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MorphyTransitions_Example-Info.plist"; sourceTree = "<group>"; };
+		3021DD7F00A1D9A79040A4564F96D21A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		32ECF6E9D9C79088F62947B6738ED49C /* Pods-MorphyTransitions_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MorphyTransitions_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		3C67D2634F9CB0CBA7165631721F0094 /* Pods_MorphyTransitions_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MorphyTransitions_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43C4134B32D087DE559E268E67465FCC /* Pods-MorphyTransitions_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MorphyTransitions_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		44F69C19724EC707A80C2E4A63C7BC40 /* MorphyTransitions-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MorphyTransitions-dummy.m"; sourceTree = "<group>"; };
+		4BF90EFEA1CF01513C2F8AB306FC3401 /* Pods-MorphyTransitions_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MorphyTransitions_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		50BB16803815FBFF9E4EB074BED962C3 /* Pods-MorphyTransitions_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MorphyTransitions_Tests-dummy.m"; sourceTree = "<group>"; };
+		50D00B5422BEE1B600DF6FD9 /* UIView+Trans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Trans.swift"; path = "Example/MorphyTransitions/UIView+Trans.swift"; sourceTree = "<group>"; };
+		50D00B5522BEE1B700DF6FD9 /* TransNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransNavController.swift; path = Example/MorphyTransitions/TransNavController.swift; sourceTree = "<group>"; };
+		5436B52E6AFA5DA7932B40E00A1DCF11 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		614DA28894E84BD676C725A6923A56AA /* MorphyTransitions-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MorphyTransitions-Info.plist"; sourceTree = "<group>"; };
+		61CF309D0A5E241573AB0F6325CC3C8D /* Pods-MorphyTransitions_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MorphyTransitions_Example-umbrella.h"; sourceTree = "<group>"; };
+		61F9D98F830E6B588333F42561AC7C31 /* MorphyTransitions-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MorphyTransitions-prefix.pch"; sourceTree = "<group>"; };
+		6DC0C464830CD80450E9D4797C28A191 /* Pods_MorphyTransitions_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MorphyTransitions_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F6771CA0A3F604B2708528826DC449B /* Pods-MorphyTransitions_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MorphyTransitions_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		6FB52CA3E7E05E926E46B6D7DAF3153E /* Pods-MorphyTransitions_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MorphyTransitions_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7E2AE64CD729244D79368C8F7753F737 /* Pods-MorphyTransitions_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MorphyTransitions_Tests-Info.plist"; sourceTree = "<group>"; };
+		85CD2C414B3D5EF31F0CA741169BCB92 /* Pods-MorphyTransitions_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MorphyTransitions_Example.modulemap"; sourceTree = "<group>"; };
+		8F9B8C13371016C5C1098C2D2DC3B64B /* Pods-MorphyTransitions_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MorphyTransitions_Tests.modulemap"; sourceTree = "<group>"; };
+		92931EF478586DF1DE547B053358E183 /* Pods-MorphyTransitions_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MorphyTransitions_Tests-umbrella.h"; sourceTree = "<group>"; };
+		92D92BA890C3619E33E5B866B5EE32B9 /* MorphyTransitions-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MorphyTransitions-umbrella.h"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A01B4E38511C1F72DEE3EED326DBDFB0 /* Pods-MorphyTransitions_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MorphyTransitions_Example.release.xcconfig"; sourceTree = "<group>"; };
+		AE3A6AB00F6C8F00DFF4A55F94F14F4E /* Pods-MorphyTransitions_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MorphyTransitions_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		BD8FAC556EC8F7ED96110C66A5FE4803 /* MorphyTransitions.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MorphyTransitions.modulemap; sourceTree = "<group>"; };
+		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CD5FF775E81638A82C2D178BBDCEF8B9 /* MorphyTransitions.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = MorphyTransitions.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D054628CFDD3867456593FE23C76971D /* MorphyTransitions.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MorphyTransitions.xcconfig; sourceTree = "<group>"; };
+		D6E922E4E481B105257C05249A727D14 /* MorphyTransitions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MorphyTransitions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E32AA551AE701C5D1AC0AF8241D6B86F /* Pods-MorphyTransitions_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MorphyTransitions_Example-frameworks.sh"; sourceTree = "<group>"; };
+		EC2E5FFB97BA199401F92396C0C7BC9E /* Pods-MorphyTransitions_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MorphyTransitions_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0436B356FEC0939607C113FEB44C757B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0918F55746C6ED1EC9E995BDF6811BFA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A820CB0ADB30D2B0F3D2D0F4611B300 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04BA710C0296C4000E60DE0A3F6E52DC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C1C9E185232008BEC623E0FFFCA4777 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D990B1CA15DC3A05327D55DCED1AB78B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		16D067EC031DCF5E79B1766362CB0A5C /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				3021DD7F00A1D9A79040A4564F96D21A /* LICENSE */,
+				CD5FF775E81638A82C2D178BBDCEF8B9 /* MorphyTransitions.podspec */,
+				5436B52E6AFA5DA7932B40E00A1DCF11 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		2F6711FDEF11C62B7FFFA79FD0AB2A0A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BD8FAC556EC8F7ED96110C66A5FE4803 /* MorphyTransitions.modulemap */,
+				D054628CFDD3867456593FE23C76971D /* MorphyTransitions.xcconfig */,
+				44F69C19724EC707A80C2E4A63C7BC40 /* MorphyTransitions-dummy.m */,
+				614DA28894E84BD676C725A6923A56AA /* MorphyTransitions-Info.plist */,
+				61F9D98F830E6B588333F42561AC7C31 /* MorphyTransitions-prefix.pch */,
+				92D92BA890C3619E33E5B866B5EE32B9 /* MorphyTransitions-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/MorphyTransitions";
+			sourceTree = "<group>";
+		};
+		56C69ACFF5B6F8444D4441D11209065A /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EBDFD41B268BE2D7ED51E98A6AC3977A /* Pods-MorphyTransitions_Example */,
+				8E4C02716298FBCC7078D1EED4A923F6 /* Pods-MorphyTransitions_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7F5FD9559D4260C3A23476B9583FED28 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ABE1723A4CF365259CF4FCA21980A0D9 /* MorphyTransitions */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		8E4C02716298FBCC7078D1EED4A923F6 /* Pods-MorphyTransitions_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				8F9B8C13371016C5C1098C2D2DC3B64B /* Pods-MorphyTransitions_Tests.modulemap */,
+				6FB52CA3E7E05E926E46B6D7DAF3153E /* Pods-MorphyTransitions_Tests-acknowledgements.markdown */,
+				43C4134B32D087DE559E268E67465FCC /* Pods-MorphyTransitions_Tests-acknowledgements.plist */,
+				50BB16803815FBFF9E4EB074BED962C3 /* Pods-MorphyTransitions_Tests-dummy.m */,
+				7E2AE64CD729244D79368C8F7753F737 /* Pods-MorphyTransitions_Tests-Info.plist */,
+				92931EF478586DF1DE547B053358E183 /* Pods-MorphyTransitions_Tests-umbrella.h */,
+				EC2E5FFB97BA199401F92396C0C7BC9E /* Pods-MorphyTransitions_Tests.debug.xcconfig */,
+				AE3A6AB00F6C8F00DFF4A55F94F14F4E /* Pods-MorphyTransitions_Tests.release.xcconfig */,
+			);
+			name = "Pods-MorphyTransitions_Tests";
+			path = "Target Support Files/Pods-MorphyTransitions_Tests";
+			sourceTree = "<group>";
+		};
+		9B055D0CFEA43187E72B03DED11F5662 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		9F2D4F33CE954A6586738F8081A063FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D6E922E4E481B105257C05249A727D14 /* MorphyTransitions.framework */,
+				3C67D2634F9CB0CBA7165631721F0094 /* Pods_MorphyTransitions_Example.framework */,
+				6DC0C464830CD80450E9D4797C28A191 /* Pods_MorphyTransitions_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ABE1723A4CF365259CF4FCA21980A0D9 /* MorphyTransitions */ = {
+			isa = PBXGroup;
+			children = (
+				50D00B5522BEE1B700DF6FD9 /* TransNavController.swift */,
+				50D00B5422BEE1B600DF6FD9 /* UIView+Trans.swift */,
+				16D067EC031DCF5E79B1766362CB0A5C /* Pod */,
+				2F6711FDEF11C62B7FFFA79FD0AB2A0A /* Support Files */,
+			);
+			name = MorphyTransitions;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				7F5FD9559D4260C3A23476B9583FED28 /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				9F2D4F33CE954A6586738F8081A063FC /* Products */,
+				56C69ACFF5B6F8444D4441D11209065A /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B055D0CFEA43187E72B03DED11F5662 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EBDFD41B268BE2D7ED51E98A6AC3977A /* Pods-MorphyTransitions_Example */ = {
+			isa = PBXGroup;
+			children = (
+				85CD2C414B3D5EF31F0CA741169BCB92 /* Pods-MorphyTransitions_Example.modulemap */,
+				4BF90EFEA1CF01513C2F8AB306FC3401 /* Pods-MorphyTransitions_Example-acknowledgements.markdown */,
+				6F6771CA0A3F604B2708528826DC449B /* Pods-MorphyTransitions_Example-acknowledgements.plist */,
+				01D9CA277755D505EBC8DCBEEF2A7412 /* Pods-MorphyTransitions_Example-dummy.m */,
+				E32AA551AE701C5D1AC0AF8241D6B86F /* Pods-MorphyTransitions_Example-frameworks.sh */,
+				224F115B3A006C2A93C64C6BA35707C2 /* Pods-MorphyTransitions_Example-Info.plist */,
+				61CF309D0A5E241573AB0F6325CC3C8D /* Pods-MorphyTransitions_Example-umbrella.h */,
+				32ECF6E9D9C79088F62947B6738ED49C /* Pods-MorphyTransitions_Example.debug.xcconfig */,
+				A01B4E38511C1F72DEE3EED326DBDFB0 /* Pods-MorphyTransitions_Example.release.xcconfig */,
+			);
+			name = "Pods-MorphyTransitions_Example";
+			path = "Target Support Files/Pods-MorphyTransitions_Example";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2B52A6E3FAD67E37E41DC8CC766FF8CB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0DF58AC9565CEEDEE909F6AFB52ED8A /* Pods-MorphyTransitions_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5785B1B081F10C7830F5725D5C66365 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7694B3EB248B0EC676D0FCE743598C40 /* Pods-MorphyTransitions_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAB4095C81C9AA5F7D978ECBCF31665F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86EFC95D91098985F5181320370558D2 /* MorphyTransitions-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2DE35EFA7F225450EC869112E69526FD /* Pods-MorphyTransitions_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 693BF71FFA3E697AE3944D23ACF63754 /* Build configuration list for PBXNativeTarget "Pods-MorphyTransitions_Tests" */;
+			buildPhases = (
+				A5785B1B081F10C7830F5725D5C66365 /* Headers */,
+				7B8090CA8C3BCDCDEFD314B255A77853 /* Sources */,
+				0436B356FEC0939607C113FEB44C757B /* Frameworks */,
+				ADBD02A44C7B5F613C55F25D0D2DB462 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C4FB43E8D33555A71CE4BE4A01FE55FF /* PBXTargetDependency */,
+			);
+			name = "Pods-MorphyTransitions_Tests";
+			productName = "Pods-MorphyTransitions_Tests";
+			productReference = 6DC0C464830CD80450E9D4797C28A191 /* Pods_MorphyTransitions_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6180F442342F6FD1F1F35914A5FC0DD3 /* Pods-MorphyTransitions_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D22A4E3BACF84EC248403549DD108139 /* Build configuration list for PBXNativeTarget "Pods-MorphyTransitions_Example" */;
+			buildPhases = (
+				2B52A6E3FAD67E37E41DC8CC766FF8CB /* Headers */,
+				8A739F51FCBDC5F68E9C141B950B969C /* Sources */,
+				5C1C9E185232008BEC623E0FFFCA4777 /* Frameworks */,
+				9679B6A02B4DF958050E52F9CFC1D7AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8492C23485BE0F4EFF0E539DDA2A4883 /* PBXTargetDependency */,
+			);
+			name = "Pods-MorphyTransitions_Example";
+			productName = "Pods-MorphyTransitions_Example";
+			productReference = 3C67D2634F9CB0CBA7165631721F0094 /* Pods_MorphyTransitions_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FF69D69AF524BEC94C0C2A73B8C77093 /* MorphyTransitions */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4D478343730A2A6CD191CBBB99E9DCE /* Build configuration list for PBXNativeTarget "MorphyTransitions" */;
+			buildPhases = (
+				BAB4095C81C9AA5F7D978ECBCF31665F /* Headers */,
+				5CB0E770784506315BA8ECEA27581F42 /* Sources */,
+				5A820CB0ADB30D2B0F3D2D0F4611B300 /* Frameworks */,
+				22B8B839CAE30E5D5253DC85ED2D28E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MorphyTransitions;
+			productName = MorphyTransitions;
+			productReference = D6E922E4E481B105257C05249A727D14 /* MorphyTransitions.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 1020;
+				TargetAttributes = {
+					FF69D69AF524BEC94C0C2A73B8C77093 = {
+						LastSwiftMigration = 1020;
+					};
+				};
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 9F2D4F33CE954A6586738F8081A063FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FF69D69AF524BEC94C0C2A73B8C77093 /* MorphyTransitions */,
+				6180F442342F6FD1F1F35914A5FC0DD3 /* Pods-MorphyTransitions_Example */,
+				2DE35EFA7F225450EC869112E69526FD /* Pods-MorphyTransitions_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		22B8B839CAE30E5D5253DC85ED2D28E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9679B6A02B4DF958050E52F9CFC1D7AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADBD02A44C7B5F613C55F25D0D2DB462 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5CB0E770784506315BA8ECEA27581F42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED2BA66C24B1A17727342006CE93841D /* MorphyTransitions-dummy.m in Sources */,
+				50D00B5622BEE1B700DF6FD9 /* UIView+Trans.swift in Sources */,
+				50D00B5722BEE1B700DF6FD9 /* TransNavController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B8090CA8C3BCDCDEFD314B255A77853 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F04FBF812618800092843CB30F16B27E /* Pods-MorphyTransitions_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A739F51FCBDC5F68E9C141B950B969C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F46DE4C6D0850E82DB1E2505A4FF7B6 /* Pods-MorphyTransitions_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8492C23485BE0F4EFF0E539DDA2A4883 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MorphyTransitions;
+			target = FF69D69AF524BEC94C0C2A73B8C77093 /* MorphyTransitions */;
+			targetProxy = A44CCBB83C7763B9ED479FF05F921F24 /* PBXContainerItemProxy */;
+		};
+		C4FB43E8D33555A71CE4BE4A01FE55FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-MorphyTransitions_Example";
+			target = 6180F442342F6FD1F1F35914A5FC0DD3 /* Pods-MorphyTransitions_Example */;
+			targetProxy = D37006E1B630623CFCD13C019DECCFFB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2A5DF81E8E90EB8A4D1806DC8349E323 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A01B4E38511C1F72DEE3EED326DBDFB0 /* Pods-MorphyTransitions_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MorphyTransitions_Example/Pods-MorphyTransitions_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MorphyTransitions_Example/Pods-MorphyTransitions_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2CAFBCC2441DF783495686B27FE36AB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE3A6AB00F6C8F00DFF4A55F94F14F4E /* Pods-MorphyTransitions_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MorphyTransitions_Tests/Pods-MorphyTransitions_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MorphyTransitions_Tests/Pods-MorphyTransitions_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5958C50F3A1C877264F8659FAC522999 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D054628CFDD3867456593FE23C76971D /* MorphyTransitions.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MorphyTransitions/MorphyTransitions-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MorphyTransitions/MorphyTransitions-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MorphyTransitions/MorphyTransitions.modulemap";
+				PRODUCT_MODULE_NAME = MorphyTransitions;
+				PRODUCT_NAME = MorphyTransitions;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9C43274C509E65FAD51023999498FB09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D054628CFDD3867456593FE23C76971D /* MorphyTransitions.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MorphyTransitions/MorphyTransitions-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MorphyTransitions/MorphyTransitions-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MorphyTransitions/MorphyTransitions.modulemap";
+				PRODUCT_MODULE_NAME = MorphyTransitions;
+				PRODUCT_NAME = MorphyTransitions;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AB4D69770D8ACE3A05E80BB3502666F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		D88603C71EE991B659ED9187B888034E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32ECF6E9D9C79088F62947B6738ED49C /* Pods-MorphyTransitions_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MorphyTransitions_Example/Pods-MorphyTransitions_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MorphyTransitions_Example/Pods-MorphyTransitions_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F232B5ECA11A71BFA199A229B323F454 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		F82C2883635C9B8C0331F5EE8CEEB351 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC2E5FFB97BA199401F92396C0C7BC9E /* Pods-MorphyTransitions_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MorphyTransitions_Tests/Pods-MorphyTransitions_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MorphyTransitions_Tests/Pods-MorphyTransitions_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB4D69770D8ACE3A05E80BB3502666F6 /* Debug */,
+				F232B5ECA11A71BFA199A229B323F454 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		693BF71FFA3E697AE3944D23ACF63754 /* Build configuration list for PBXNativeTarget "Pods-MorphyTransitions_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F82C2883635C9B8C0331F5EE8CEEB351 /* Debug */,
+				2CAFBCC2441DF783495686B27FE36AB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4D478343730A2A6CD191CBBB99E9DCE /* Build configuration list for PBXNativeTarget "MorphyTransitions" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5958C50F3A1C877264F8659FAC522999 /* Debug */,
+				9C43274C509E65FAD51023999498FB09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D22A4E3BACF84EC248403549DD108139 /* Build configuration list for PBXNativeTarget "Pods-MorphyTransitions_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D88603C71EE991B659ED9187B888034E /* Debug */,
+				2A5DF81E8E90EB8A4D1806DC8349E323 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

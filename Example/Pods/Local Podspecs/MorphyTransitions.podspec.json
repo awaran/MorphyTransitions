@@ -1,0 +1,22 @@
+{
+  "name": "MorphyTransitions",
+  "version": "0.1.0",
+  "summary": "A short description of MorphyTransitions.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/awaran/MorphyTransitions",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "awaran": "arjay@photokeeper.com"
+  },
+  "source": {
+    "git": "https://github.com/awaran/MorphyTransitions.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "MorphyTransitions/Classes/**/*"
+}
