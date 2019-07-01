@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		04BA710C0296C4000E60DE0A3F6E52DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 		0918F55746C6ED1EC9E995BDF6811BFA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
-		50D00B5622BEE1B700DF6FD9 /* UIView+Trans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D00B5422BEE1B600DF6FD9 /* UIView+Trans.swift */; };
-		50D00B5722BEE1B700DF6FD9 /* TransNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D00B5522BEE1B700DF6FD9 /* TransNavController.swift */; };
+		50FAB71022CA9BCD00E0EC61 /* TransNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FAB70E22CA9BCD00E0EC61 /* TransNavController.swift */; };
+		50FAB71122CA9BCD00E0EC61 /* UIView+Trans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FAB70F22CA9BCD00E0EC61 /* UIView+Trans.swift */; };
 		6F46DE4C6D0850E82DB1E2505A4FF7B6 /* Pods-MorphyTransitions_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D9CA277755D505EBC8DCBEEF2A7412 /* Pods-MorphyTransitions_Example-dummy.m */; };
 		7694B3EB248B0EC676D0FCE743598C40 /* Pods-MorphyTransitions_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 92931EF478586DF1DE547B053358E183 /* Pods-MorphyTransitions_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		86EFC95D91098985F5181320370558D2 /* MorphyTransitions-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 92D92BA890C3619E33E5B866B5EE32B9 /* MorphyTransitions-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -47,8 +47,8 @@
 		44F69C19724EC707A80C2E4A63C7BC40 /* MorphyTransitions-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MorphyTransitions-dummy.m"; sourceTree = "<group>"; };
 		4BF90EFEA1CF01513C2F8AB306FC3401 /* Pods-MorphyTransitions_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MorphyTransitions_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		50BB16803815FBFF9E4EB074BED962C3 /* Pods-MorphyTransitions_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MorphyTransitions_Tests-dummy.m"; sourceTree = "<group>"; };
-		50D00B5422BEE1B600DF6FD9 /* UIView+Trans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Trans.swift"; path = "Example/MorphyTransitions/UIView+Trans.swift"; sourceTree = "<group>"; };
-		50D00B5522BEE1B700DF6FD9 /* TransNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransNavController.swift; path = Example/MorphyTransitions/TransNavController.swift; sourceTree = "<group>"; };
+		50FAB70E22CA9BCD00E0EC61 /* TransNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransNavController.swift; path = Example/MorphyTransitions/TransNavController.swift; sourceTree = "<group>"; };
+		50FAB70F22CA9BCD00E0EC61 /* UIView+Trans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Trans.swift"; path = "Example/MorphyTransitions/UIView+Trans.swift"; sourceTree = "<group>"; };
 		5436B52E6AFA5DA7932B40E00A1DCF11 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		614DA28894E84BD676C725A6923A56AA /* MorphyTransitions-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MorphyTransitions-Info.plist"; sourceTree = "<group>"; };
 		61CF309D0A5E241573AB0F6325CC3C8D /* Pods-MorphyTransitions_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MorphyTransitions_Example-umbrella.h"; sourceTree = "<group>"; };
@@ -179,8 +179,8 @@
 		ABE1723A4CF365259CF4FCA21980A0D9 /* MorphyTransitions */ = {
 			isa = PBXGroup;
 			children = (
-				50D00B5522BEE1B700DF6FD9 /* TransNavController.swift */,
-				50D00B5422BEE1B600DF6FD9 /* UIView+Trans.swift */,
+				50FAB70E22CA9BCD00E0EC61 /* TransNavController.swift */,
+				50FAB70F22CA9BCD00E0EC61 /* UIView+Trans.swift */,
 				16D067EC031DCF5E79B1766362CB0A5C /* Pod */,
 				2F6711FDEF11C62B7FFFA79FD0AB2A0A /* Support Files */,
 			);
@@ -373,9 +373,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50FAB71022CA9BCD00E0EC61 /* TransNavController.swift in Sources */,
+				50FAB71122CA9BCD00E0EC61 /* UIView+Trans.swift in Sources */,
 				ED2BA66C24B1A17727342006CE93841D /* MorphyTransitions-dummy.m in Sources */,
-				50D00B5622BEE1B700DF6FD9 /* UIView+Trans.swift in Sources */,
-				50D00B5722BEE1B700DF6FD9 /* TransNavController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
