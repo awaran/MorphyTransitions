@@ -83,7 +83,11 @@ class Tests: XCTestCase {
             return
         }
         
+        XCTAssertEqual(nil, beforeVC.one.morphIdentifier, "morph identifier should be nil if we use get before any set")
         beforeVC.one.morphIdentifier = "one"
+        
+        XCTAssertEqual("one", beforeVC.one.morphIdentifier, "morph id was not set or the getter didn't work")
+
         beforeVC.two.morphIdentifier = "two"
         checkBeforeAndAfterTransSameness()
     }

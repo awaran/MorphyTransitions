@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MorphyTransitions'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'For easy custom transitions for swift and autolayout'
   
 # This description is used to generate tags and improve search results.
@@ -37,8 +37,8 @@ To to use any animations, use <UIView>.overlapViewWithReset, <UIView>.swapViewsW
   s.social_media_url = 'https://www.facebook.com/arjay.waran'
   s.social_media_url = 'https://twitter.com/ArjayWaran'
   s.homepage = 'http://arjaywaran.com'
-
-
+  s.swift_version = '5.0'
+  
   s.ios.deployment_target = '10.0'
 
   #s.source_files = 'MorphyTransitions/Classes/**/*'
