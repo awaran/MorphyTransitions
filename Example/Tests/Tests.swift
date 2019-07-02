@@ -3,7 +3,7 @@ import MorphyTransitions
 
 
 class Tests: XCTestCase {
-    /*
+    
     let storyboardName = "TestBoard"
     let navControllerID = "generalNavControllerId"
     let beforeTransVCID = "generalBeforeTransId"
@@ -27,7 +27,7 @@ class Tests: XCTestCase {
             XCTFail("error, can't find navigation controller.  navigation controller is nil")
             return
         }
- 
+        
         
         let window = UIWindow()
         window.rootViewController = navigationController
@@ -436,5 +436,5 @@ fileprivate struct LayoutState: Equatable {
             left.constant == right.constant &&
             left.shouldBeArchived == right.shouldBeArchived
     }
- */
+ 
 }
