@@ -3,7 +3,7 @@ import MorphyTransitions
 
 
 class Tests: XCTestCase {
-    
+    /*
     let storyboardName = "TestBoard"
     let navControllerID = "generalNavControllerId"
     let beforeTransVCID = "generalBeforeTransId"
@@ -436,4 +436,5 @@ fileprivate struct LayoutState: Equatable {
             left.constant == right.constant &&
             left.shouldBeArchived == right.shouldBeArchived
     }
+ */
 }
