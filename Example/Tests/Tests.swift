@@ -27,7 +27,7 @@ class Tests: XCTestCase {
             XCTFail("error, can't find navigation controller.  navigation controller is nil")
             return
         }
-        
+ 
         
         let window = UIWindow()
         window.rootViewController = navigationController
