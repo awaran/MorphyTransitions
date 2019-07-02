@@ -1,7 +1,7 @@
 coverage_service: cobertura_xml
 xcodeproj: Example/MorphyTransitions.xcodeproj
-scheme: MorphyTransitions
+scheme: MorphyTransitions-Example
 output_directory: reports
 ignore:
-  - Tests/*
+  - Example/Tests/*
 
