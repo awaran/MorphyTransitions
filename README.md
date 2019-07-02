@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/MorphyTransitions.svg?style=flat)](https://cocoapods.org/pods/MorphyTransitions)
 [![Platform](https://img.shields.io/cocoapods/p/MorphyTransitions.svg?style=flat)](https://cocoapods.org/pods/MorphyTransitions)
 
-## Transition example
+## Transition example (in slow motion)
 ![](transition.gif)
 
 ## Example
