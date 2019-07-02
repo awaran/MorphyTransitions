@@ -8,12 +8,11 @@
 # * https://www.objc.io/issues/6-build-tools/travis-ci/
 # * https://github.com/supermarin/xcpretty#usage
 
-osx_image: xcode10.1
+osx_image: xcode10.2.1
 language: objective-c
 env:
   matrix:
     - TEST_SDK=iphonesimulator12.1 OS=12.1 NAME='iPhone XR'
-    - TEST_SDK=iphonesimulator12.1 OS=12.1 NAME='iPhone 7'
 # cache: cocoapods
 # podfile: Example/Podfile
 # before_install:
@@ -21,4 +20,4 @@ env:
 # - pod install --project-directory=Example
 script:
 - set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/MorphyTransitions.xcworkspace -scheme MorphyTransitions-Example -sdk iphonesimulator9.3 ONLY_ACTIVE_ARCH=NO | xcpretty
-- pod lib lint
+- pod lib lint --verbose
