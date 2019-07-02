@@ -25,7 +25,7 @@ pod 'MorphyTransitions'
 
 ## Author
 
-awaran, arjay@photokeeper.com
+Arjay Waran, waran.arjay@gmail.com
 
 ## License
 
