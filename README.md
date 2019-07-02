@@ -4,6 +4,7 @@
 [![Version](https://img.shields.io/cocoapods/v/MorphyTransitions.svg?style=flat)](https://cocoapods.org/pods/MorphyTransitions)
 [![License](https://img.shields.io/cocoapods/l/MorphyTransitions.svg?style=flat)](https://cocoapods.org/pods/MorphyTransitions)
 [![Platform](https://img.shields.io/cocoapods/p/MorphyTransitions.svg?style=flat)](https://cocoapods.org/pods/MorphyTransitions)
+[![codecov](https://codecov.io/gh/awaran/MorphyTransitions/branch/master/graph/badge.svg)](https://codecov.io/gh/awaran/MorphyTransitions)
 
 ## Example
 
