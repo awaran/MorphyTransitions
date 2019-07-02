@@ -8,18 +8,31 @@
 # * https://www.objc.io/issues/6-build-tools/travis-ci/
 # * https://github.com/supermarin/xcpretty#usage
 
-language: objective-c
-osx_image: xcode10.2.1
-#osx_image: xcode10.3
-env:
-  matrix:
-    - TEST_SDK=iphonesimulator12.1 OS=12.1 NAME='iPhone XR'
+#language: objective-c
+#osx_image: xcode10.1
+#osx_image: xcode10.2.1
+#env:
+#  matrix:
+#    - TEST_SDK=iphonesimulator12.1 OS=12.1 NAME='iPhone XR'
 # cache: cocoapods
 # podfile: Example/Podfile
 # before_install:
 # - gem install cocoapods # Since Travis is not always on latest version
 # - pod install --project-directory=Example
-script:
-- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/MorphyTransitions.xcworkspace -scheme MorphyTransitions-Example -sdk iphonesimulator12.1 ONLY_ACTIVE_ARCH=NO | xcpretty
+#script:
+  #- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/MorphyTransitions.xcworkspace -scheme MorphyTransitions-Example -sdk iphonesimulator12.1 ONLY_ACTIVE_ARCH=NO | xcpretty
   #- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/MorphyTransitions.xcworkspace -scheme MorphyTransitions-Example -sdk $TEST_SDK -destination "platform=iOS Simulator,OS=$OS,name=$NAME" ONLY_ACTIVE_ARCH=YES
   #- pod lib lint --verbose
+  #
+language: objective-c
+
+osx_image: xcode10.1
+env:
+  matrix:
+    - TEST_SDK=iphonesimulator12.1 OS=12.1 NAME='iPhone XR'
+
+script:
+  - set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/MorphyTransitions.xcworkspace -scheme MorphyTransitions-Example -sdk $TEST_SDK -destination "platform=iOS Simulator,OS=$OS,name=$NAME" ONLY_ACTIVE_ARCH=YES
+view 
+
+
