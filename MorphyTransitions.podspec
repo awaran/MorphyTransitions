@@ -37,8 +37,8 @@ To to use any animations, use <UIView>.overlapViewWithReset, <UIView>.swapViewsW
   s.social_media_url = 'https://www.facebook.com/arjay.waran'
   s.social_media_url = 'https://twitter.com/ArjayWaran'
   s.homepage = 'http://arjaywaran.com'
-  #s.swift_version = '5.0'
-  s.swift_versions = ['4.2', '5.0']
+  s.swift_version = '5.0'
+  #s.swift_versions = ['4.2', '5.0']
   
   s.ios.deployment_target = '10.0'
 
