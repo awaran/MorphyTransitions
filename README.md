@@ -54,7 +54,7 @@ Your done!
 ##### Description
 Overlaps the view you call from to the destination view
 
-dest: The destination view you overlap self onto
+*dest*: The destination view you overlap self onto
 animationDuration: How long it takes for the overlap to happen
 doesFade: after the overlap, if this is set on, it will make the self view fade out revealing the dest view
 fadeDuration: If doesFade is set to true, this is how long it will take for self to fade out
