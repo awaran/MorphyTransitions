@@ -51,7 +51,7 @@ Your done!
 
 ### func overlapViewWithReset(dest:UIView, animationDuration:TimeInterval, doesFade:Bool = false, fadeDuration:TimeInterval = 0.0, callback:@escaping ((_ resetBlock:@escaping()->Void) -> Void) = {(resetBlock:@escaping()->Void) in resetBlock() }) throws
 
-##### Description
+**Description**
 Overlaps the view you call from to the destination view
 
 **dest**: The destination view you overlap self onto
@@ -74,7 +74,7 @@ beforeVC.one.overlapViewWithReset(dest:beforeVC.two ....
 
 ### func swapViewsWithReset(dest:UIView, animationDuration:TimeInterval, doesFade:Bool = false, fadeDuration:TimeInterval = 0.0, callback:@escaping ((_ resetBlock:@escaping()->Void) -> Void) = {(resetBlock:@escaping()->Void) in resetBlock() }) throws
 
-##### Description
+**Description**
 Swaps the calling view with the dest view then resets back to their original location
 
 **dest**: The destination view you want to swap with
@@ -96,13 +96,18 @@ beforeVC.one.swapViewsWithReset(dest:beforeVC.two ....
 
 ### func swapView(dest:UIView, animationDuration:TimeInterval, doesFade:Bool = false, fadeDuration:TimeInterval = 0.0, callback:@escaping (() -> Void) = {}) throws
 
+**Description**
 Swaps the calling view with the dest view including their nslayouts.  ProTip (to get a view to move from one set of layouts to another set of layouts, set the dest view as invisable then animate between the visable and invisable views)
 
-dest: The destination view you want to swap with
-animationDuration: How long it takes for the swap to happen
-doesFade: after the swap, if this is set on, it will make the self and dest views fade out
-fadeDuration: If doesFade is set to true, this is how long it will take for self and dest to fade out
-callback: the callback will happen after the animation and possible fade animation happens
+**dest**: The destination view you want to swap with
+
+**animationDuration**: How long it takes for the swap to happen
+
+**doesFade**: after the swap, if this is set on, it will make the self and dest views fade out
+
+**fadeDuration**: If doesFade is set to true, this is how long it will take for self and dest to fade out
+
+**callback**: the callback will happen after the animation and possible fade animation happens
 
 ```swift
 beforeVC.one.swapView(dest:beforeVC.two ....
