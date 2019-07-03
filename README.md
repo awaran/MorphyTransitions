@@ -87,7 +87,7 @@ Swaps the calling view with the dest view then resets back to their original loc
 
 **callback**: the callback will happen after the animation and possible fade animation happens
     
-    **resetBlock**: the block that you use to reset the views back to their original locations with their original layouts.  Be sure to call reset or the fames will be locked in non-autolayout format
+   **resetBlock**: the block that you use to reset the views back to their original locations with their original layouts.  Be sure to call reset or the fames will be locked in non-autolayout format
 
 ```swift
 beforeVC.one.swapViewsWithReset(dest:beforeVC.two ....
