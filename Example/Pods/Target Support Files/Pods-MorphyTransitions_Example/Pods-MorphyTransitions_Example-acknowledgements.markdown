@@ -3,7 +3,7 @@ This application makes use of the following third party libraries:
 
 ## MorphyTransitions
 
-Copyright (c) 2019 awaran <arjay@photokeeper.com>
+Copyright (c) 2019 Arjay Waran <waran.arjay@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
