@@ -46,6 +46,60 @@ afterVC.one.morphIdentifier = "one"
 #### Step 3:
 Your done!
 
+## Extra animation assistance In UIView
+
+
+### func overlapViewWithReset(dest:UIView, animationDuration:TimeInterval, doesFade:Bool = false, fadeDuration:TimeInterval = 0.0, callback:@escaping ((_ resetBlock:@escaping()->Void) -> Void) = {(resetBlock:@escaping()->Void) in resetBlock() }) throws
+
+##### Description
+Overlaps the view you call from to the destination view
+
+dest: The destination view you overlap self onto
+animationDuration: How long it takes for the overlap to happen
+doesFade: after the overlap, if this is set on, it will make the self view fade out revealing the dest view
+fadeDuration: If doesFade is set to true, this is how long it will take for self to fade out
+callback: the callback will happen after the animation and possible fade animation happens
+    resetBlock: the block that you use to reset the views back to their original locations with their original layouts. Be sure to call reset or the fames will be locked in non-autolayout format
+
+```swift
+beforeVC.one.overlapViewWithReset(dest:beforeVC.two ....
+```
+
+
+
+### func swapViewsWithReset(dest:UIView, animationDuration:TimeInterval, doesFade:Bool = false, fadeDuration:TimeInterval = 0.0, callback:@escaping ((_ resetBlock:@escaping()->Void) -> Void) = {(resetBlock:@escaping()->Void) in resetBlock() }) throws
+
+##### Description
+Swaps the calling view with the dest view then resets back to their original location
+
+dest: The destination view you want to swap with
+animationDuration: How long it takes for the swap to happen
+doesFade: after the swap, if this is set on, it will make the self and dest views fade out
+fadeDuration: If doesFade is set to true, this is how long it will take for self and dest to fade out
+callback: the callback will happen after the animation and possible fade animation happens
+    resetBlock: the block that you use to reset the views back to their original locations with their original layouts.  Be sure to call reset or the fames will be locked in non-autolayout format
+
+```swift
+beforeVC.one.swapViewsWithReset(dest:beforeVC.two ....
+```
+
+
+### func swapView(dest:UIView, animationDuration:TimeInterval, doesFade:Bool = false, fadeDuration:TimeInterval = 0.0, callback:@escaping (() -> Void) = {}) throws
+
+Swaps the calling view with the dest view including their nslayouts.  ProTip (to get a view to move from one set of layouts to another set of layouts, set the dest view as invisable then animate between the visable and invisable views)
+
+dest: The destination view you want to swap with
+animationDuration: How long it takes for the swap to happen
+doesFade: after the swap, if this is set on, it will make the self and dest views fade out
+fadeDuration: If doesFade is set to true, this is how long it will take for self and dest to fade out
+callback: the callback will happen after the animation and possible fade animation happens
+
+```swift
+beforeVC.one.swapView(dest:beforeVC.two ....
+```
+
+
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
