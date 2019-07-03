@@ -55,11 +55,16 @@ Your done!
 Overlaps the view you call from to the destination view
 
 **dest**: The destination view you overlap self onto
+
 **animationDuration**: How long it takes for the overlap to happen
+
 **doesFade**: after the overlap, if this is set on, it will make the self view fade out revealing the dest view
+
 **fadeDuration**: If doesFade is set to true, this is how long it will take for self to fade out
+
 **callback**: the callback will happen after the animation and possible fade animation happens
-    **resetBlock**: the block that you use to reset the views back to their original locations with their original layouts. Be sure to call reset or the fames will be locked in non-autolayout format
+
+   **resetBlock**: the block that you use to reset the views back to their original locations with their original layouts. Be sure to call reset or the fames will be locked in non-autolayout format
 
 ```swift
 beforeVC.one.overlapViewWithReset(dest:beforeVC.two ....
@@ -72,12 +77,17 @@ beforeVC.one.overlapViewWithReset(dest:beforeVC.two ....
 ##### Description
 Swaps the calling view with the dest view then resets back to their original location
 
-dest: The destination view you want to swap with
-animationDuration: How long it takes for the swap to happen
-doesFade: after the swap, if this is set on, it will make the self and dest views fade out
-fadeDuration: If doesFade is set to true, this is how long it will take for self and dest to fade out
-callback: the callback will happen after the animation and possible fade animation happens
-    resetBlock: the block that you use to reset the views back to their original locations with their original layouts.  Be sure to call reset or the fames will be locked in non-autolayout format
+**dest**: The destination view you want to swap with
+
+**animationDuration**: How long it takes for the swap to happen
+
+**doesFade**: after the swap, if this is set on, it will make the self and dest views fade out
+
+**fadeDuration**: If doesFade is set to true, this is how long it will take for self and dest to fade out
+
+**callback**: the callback will happen after the animation and possible fade animation happens
+    
+    **resetBlock**: the block that you use to reset the views back to their original locations with their original layouts.  Be sure to call reset or the fames will be locked in non-autolayout format
 
 ```swift
 beforeVC.one.swapViewsWithReset(dest:beforeVC.two ....
