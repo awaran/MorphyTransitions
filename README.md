@@ -33,8 +33,11 @@ Replace UINavigationController with TransNavController
 Step 2:
 Each view will now have var name morphIdentifier.  Create morphIdentifiers that coraspond to views that morph into / out of each other.  For example, if I wanted the green upper left view from the starting view controller to morph into the upper left green view of the ending view controller, I would name both views with the same  morphIdentifiers.  In this case, I named them one but you can pick any identifier you want to.
 
+```swift
 beforeVC.one.morphIdentifier = "one"
 afterVC.one.morphIdentifier = "one"
+```
+
 
 ## Example
 
