@@ -10,6 +10,7 @@
 
 
 ## Video tutorial
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/9zYCuM7GyFo/0.jpg)](https://www.youtube.com/watch?v=9zYCuM7GyFo)
 
 
 ## Instructions (for Storyboard scroll down for instructions in code)
