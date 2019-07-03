@@ -16,9 +16,11 @@
 After installing the cocoapod (details down below)
 Step 1:
 Replace UINavigationController with TransNavController
+![](TransNav.png)
 
 Step 2:
 Each view will now have a Morph id section in your storyboard.  Create IDs that coraspond to views that morph into / out of each other.  For example, if I wanted the green upper left view from the starting view controller to morph into the upper left green view of the ending view controller, I would name both views with the same  Morph Id.  In this case, I named them one but you can pick any identifier you want to.
+![](StartVC.png)![](EndVC.png)
 
 Step 3:
 Your done!
