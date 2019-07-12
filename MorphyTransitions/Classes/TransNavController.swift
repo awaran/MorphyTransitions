@@ -24,7 +24,7 @@ public class TransNavController: UINavigationController {
     override public func popViewController(animated: Bool) -> UIViewController? {
         return self.popViewController(animated: animated, completion: nil)
     }
-
+    
     public func pushViewController(viewController: UIViewController,
                                    animated: Bool,
                                    completion: (()->())?) {
@@ -47,6 +47,7 @@ public class TransNavController: UINavigationController {
         let prevViewController = super.popViewController(animated: false)
         
         if animated, let prevViewController = prevViewController, let curViewController = self.getCurrentViewController(), let sourceView = prevViewController.view, let destView = curViewController.view {
+            
             self.animateViewFrom(sourceView, destView: destView) {
                 UIApplication.shared.endIgnoringInteractionEvents()
                 completion?()
@@ -59,10 +60,16 @@ public class TransNavController: UINavigationController {
         
         return prevViewController
     }
-
     
-    fileprivate func animateViewFrom(_ sourceView:UIView, destView:UIView, callback:@escaping ()->Void) {
-
+    fileprivate func getOffset (_ view:UIView) -> CGPoint {
+        if let curScrollView = view as? UIScrollView {
+            return curScrollView.contentOffset
+        }
+        return CGPoint(x: 0, y:0)
+    }
+    
+    fileprivate func animateViewFrom(_ sourceView:UIView, destView:UIView , callback:@escaping ()->Void) {
+        let offset = self.getOffset(destView)
         var sourceAnimationViews = [String:UIView] ()
         self.getAllAnimationIDViews(view:sourceView, animViews:&sourceAnimationViews)
         
@@ -72,6 +79,8 @@ public class TransNavController: UINavigationController {
         let prevSourceParent = sourceView.superview
         sourceView.removeFromSuperview()
         destView.addSubview(sourceView)
+        
+        sourceView.frame = CGRect(x: sourceView.frame.origin.x+offset.x, y: sourceView.frame.origin.y+offset.y, width: sourceView.frame.width, height: sourceView.frame.height)
         
         let cntQueue = DispatchQueue(label: "TRANSITION_ANIMATION_LOCK_FOR_CNT")
         
@@ -140,11 +149,11 @@ public class TransNavController: UINavigationController {
         guard count > 0 else { return nil }
         return viewControllers[count - 1]
     }
-
+    
     func getPreviousViewController() -> UIViewController? {
         let count = viewControllers.count
         guard count > 1 else { return nil }
         return viewControllers[count - 2]
     }
-
+    
 }
