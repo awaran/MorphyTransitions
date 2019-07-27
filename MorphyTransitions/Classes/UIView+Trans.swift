@@ -301,11 +301,12 @@ public extension UIView
     //set the autolayout settings and frames for current view from the saved layout state
     fileprivate func setLayoutState(curLayout:LayoutState) {
         self.translatesAutoresizingMaskIntoConstraints = curLayout.translatesAutoresizingMaskIntoConstraints
-        self.removeConstraints(self.constraints)
         if (self.translatesAutoresizingMaskIntoConstraints) {
             self.frame = curLayout.frame
         }
+        self.removeConstraints(self.constraints)
         self.addConstraints(curLayout.constraints)
+        self.layoutIfNeeded() //needed for nav transitions.  Apple safty checks auto include content layouts for uilabels if layouts don't get set before a transition completes
     }
     
     //get the root view of the current view
@@ -362,7 +363,7 @@ public extension UIView
     
     //transverses the subviews starting with view and does doWork on all of them unless it's a nav bar
     static fileprivate func transverseViews (view:UIView, doWork:@escaping ((UIView) -> Void)) {
-        if (!(view is UINavigationBar || view is UIToolbar)) {
+        if (!(view is UINavigationBar || view is UIToolbar || view is UITabBar)) {
             doWork(view)
             for curView in view.subviews {
                 transverseViews(view: curView, doWork: doWork)

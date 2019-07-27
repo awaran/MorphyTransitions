@@ -9,80 +9,72 @@
 
 import UIKit
 
-public class TransNavController: UINavigationController {
+public class TransNavController: UINavigationController, UINavigationControllerDelegate {
     public var animationDuration = 1.5 //sets the amount of time that the animation happens
     public var fadeDuration = 0.5 //amount of time that the previous view controller fades out
     
     override public func viewDidLoad() {
         super.viewDidLoad()
+        self.delegate = self
     }
     
-    override public func pushViewController(_ viewController: UIViewController, animated: Bool) {
-        self.pushViewController(viewController: viewController, animated: animated, completion: nil)
-    }
-    
-    override public func popViewController(animated: Bool) -> UIViewController? {
-        return self.popViewController(animated: animated, completion: nil)
-    }
-    
-    public func pushViewController(viewController: UIViewController,
-                                   animated: Bool,
-                                   completion: (()->())?) {
-        UIApplication.shared.beginIgnoringInteractionEvents()
-        super.pushViewController(viewController, animated: false)
-        if animated, let prevViewController = self.getPreviousViewController(), let sourceView = prevViewController.view, let destView = viewController.view {
-            self.animateViewFrom(sourceView, destView: destView) {
-                UIApplication.shared.endIgnoringInteractionEvents()
-                completion?()
-            }
-        } else {
-            print("TransNavController:pushViewController: no animation happened, either invalid state or animate is false")
-            UIApplication.shared.endIgnoringInteractionEvents()
-            completion?()
+    public func navigationController(_ navigationController: UINavigationController,
+                                     animationControllerFor operation: UINavigationController.Operation,
+                                     from fromVC: UIViewController,
+                                     to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        switch operation {
+        case .push:
+            return MorphTransAnimator(type: .morphNavigation, fadeDuration: self.fadeDuration, animationDuration: self.animationDuration)
+        case .pop:
+            return MorphTransAnimator(type: .morphNavigation, fadeDuration: self.fadeDuration, animationDuration: self.animationDuration)
+        default:
+            return nil
         }
     }
+}
+
+
+open class MorphTransAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     
-    public func popViewController(animated: Bool, completion: (()->())?) -> UIViewController? {
-        UIApplication.shared.beginIgnoringInteractionEvents()
-        let prevViewController = super.popViewController(animated: false)
-        
-        if animated, let prevViewController = prevViewController, let curViewController = self.getCurrentViewController(), let sourceView = prevViewController.view, let destView = curViewController.view {
-            
-            self.animateViewFrom(sourceView, destView: destView) {
-                UIApplication.shared.endIgnoringInteractionEvents()
-                completion?()
-            }
-        } else {
-            print("TransNavController:popViewConroller: no animation happened, either invalid state or animate is false")
-            UIApplication.shared.endIgnoringInteractionEvents()
-            completion?()
-        }
-        
-        return prevViewController
+    public enum TransitionType {
+        case navigation
+        case morphNavigation
     }
     
-    fileprivate func getOffset (_ view:UIView) -> CGPoint {
-        if let curScrollView = view as? UIScrollView {
-            return curScrollView.contentOffset
-        }
-        return CGPoint(x: 0, y:0)
+    let type: TransitionType
+    public var fadeDuration:TimeInterval //amount of time that the previous view controller fades out
+    public var animationDuration:TimeInterval //sets the amount of time that the animation happens
+    public var transitionComputeTime:TimeInterval //if a dev wants to do a nested push / pop (not apple supported but just in case) and needs the return of pop
+    
+    public init(type: TransitionType, fadeDuration: TimeInterval = 0.5, animationDuration: TimeInterval = 1.5, transitionComputeTime:TimeInterval = 0.01) {
+        self.type = type
+        self.fadeDuration = fadeDuration
+        self.animationDuration = animationDuration
+        self.transitionComputeTime = transitionComputeTime
+        
+        super.init()
     }
     
-    fileprivate func animateViewFrom(_ sourceView:UIView, destView:UIView , callback:@escaping ()->Void) {
-        let offset = self.getOffset(destView)
-        var sourceAnimationViews = [String:UIView] ()
-        self.getAllAnimationIDViews(view:sourceView, animViews:&sourceAnimationViews)
-        
-        var destAnimationViews = [String:UIView] ()
-        self.getAllAnimationIDViews(view:destView, animViews:&destAnimationViews)
-        
-        let prevSourceParent = sourceView.superview
-        sourceView.removeFromSuperview()
-        destView.addSubview(sourceView)
-        
-        sourceView.frame = CGRect(x: sourceView.frame.origin.x+offset.x, y: sourceView.frame.origin.y+offset.y, width: sourceView.frame.width, height: sourceView.frame.height)
-        
-        let cntQueue = DispatchQueue(label: "TRANSITION_ANIMATION_LOCK_FOR_CNT")
+    open func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+        return self.fadeDuration + self.animationDuration + self.transitionComputeTime
+    }
+    
+    open func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+        guard
+            let toViewController = transitionContext.viewController(forKey: .to)
+            else {
+                return
+        }
+        let containerView = transitionContext.containerView
+        self.animateViewFrom(containerView, toView: toViewController.view) {
+            transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+        }
+    }
+
+    fileprivate func animateViewFrom(_ containerView:UIView, toView:UIView , callback:@escaping ()->Void) {
+        toView.alpha = 0.0
+        containerView.addSubview(toView)
+        containerView.layoutIfNeeded()
         
         var allResetBlocks = [() -> Void]()
         var cnt = 0
@@ -90,9 +82,8 @@ public class TransNavController: UINavigationController {
         var fadeAnimator: UIViewPropertyAnimator!
         
         fadeAnimator = UIViewPropertyAnimator(duration: self.fadeDuration, curve: .easeInOut) {
-            
-            sourceView.alpha = 0.0
-            sourceView.layoutIfNeeded()
+            toView.alpha = 1.0
+            toView.layoutIfNeeded()
         }
         
         fadeAnimator.addCompletion { position in
@@ -100,21 +91,31 @@ public class TransNavController: UINavigationController {
                 for curResetBlock in allResetBlocks {
                     curResetBlock()
                 }
-                //we reset all the animation views back before we reset the source view.  the source view was in dest view when we did the animation so the reset needs to happen when the source view is in the animation
-                sourceView.alpha = 1.0
-                sourceView.removeFromSuperview()
-                prevSourceParent?.addSubview(sourceView)
-                prevSourceParent?.layoutIfNeeded()
                 callback()
             }
         }
+
+        guard let fromView = containerView.subviews.first else {
+            print ("No from view exists, just do fade transition")
+            fadeAnimator.startAnimation()
+            return
+        }
         
-        for (animationId, curSourceView) in sourceAnimationViews {
-            if let curDestView = destAnimationViews[animationId] {
+        var fromViewAnimationViews = [String:UIView] ()
+        self.getAllAnimationIDViews(view:fromView, animViews:&fromViewAnimationViews)
+        
+        var toViewAnimationViews = [String:UIView] ()
+        self.getAllAnimationIDViews(view:toView, animViews:&toViewAnimationViews)
+        
+        let cntQueue = DispatchQueue(label: "TRANSITION_ANIMATION_LOCK_FOR_CNT")
+        
+        
+        for (animationId, curFromSubView) in fromViewAnimationViews {
+            if let curToSubView = toViewAnimationViews[animationId] {
                 atLeastOneAnimation = true
                 cnt += 1
                 do {
-                    try curSourceView.overlapViewWithReset(dest: curDestView, animationDuration: self.animationDuration, doesFade: false, fadeDuration: 0) {(resetBlock:@escaping ()->Void) in
+                    try curFromSubView.overlapViewWithReset(dest: curToSubView, animationDuration: self.animationDuration, doesFade: false, fadeDuration: 0) {(resetBlock:@escaping ()->Void) in
                         cntQueue.sync {
                             cnt -= 1
                             allResetBlocks.append(resetBlock)
@@ -143,17 +144,4 @@ public class TransNavController: UINavigationController {
             self.getAllAnimationIDViews(view: curView, animViews: &animViews)
         }
     }
-    
-    func getCurrentViewController() -> UIViewController? {
-        let count = viewControllers.count
-        guard count > 0 else { return nil }
-        return viewControllers[count - 1]
-    }
-    
-    func getPreviousViewController() -> UIViewController? {
-        let count = viewControllers.count
-        guard count > 1 else { return nil }
-        return viewControllers[count - 2]
-    }
-    
 }

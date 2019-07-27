@@ -14,6 +14,8 @@ class Tests: XCTestCase {
     var afterVC:GeneralAfterViewController?
     var storyboard:UIStoryboard?
     fileprivate var beforeAnimationAllLayouts:[UIView:LayoutState]?
+    let fadeDuration = 0.2
+    let animationDuration = 0.3
     
     override func setUp() {
         
@@ -27,7 +29,8 @@ class Tests: XCTestCase {
             XCTFail("error, can't find navigation controller.  navigation controller is nil")
             return
         }
-        
+        self.navigationController?.fadeDuration = self.fadeDuration
+        self.navigationController?.animationDuration = self.animationDuration
         
         let window = UIWindow()
         window.rootViewController = navigationController
@@ -44,7 +47,6 @@ class Tests: XCTestCase {
             XCTFail("error, top vc failed to load into nav controller")
             return
         }
-        
         //save all autolayouts for the views that the vc controls
         self.beforeAnimationAllLayouts = self.getAllLayouts(vc: curVC)
         
@@ -174,7 +176,7 @@ class Tests: XCTestCase {
                 XCTAssertNotEqual(beforeOneLayout, afterOneLayout, "view one has not moved")
 
                 resetBlock()
-
+                
                 afterOneLayout = self.getLayoutState(view: curVC.one)
                 XCTAssertEqual(beforeOneLayout, afterOneLayout, "view one did not reset after reset block was called")
 
@@ -183,6 +185,9 @@ class Tests: XCTestCase {
                     guard let afterLayouts = afterAnimationAllLayouts[curView] else {
                         XCTFail("Error: a view that existed before the animation no longer exists after")
                         return
+                    }
+                    if (beforeLayouts != afterLayouts) {
+                        print ("test")
                     }
                     XCTAssertEqual(beforeLayouts, afterLayouts, "before layouts don't match after layouts")
                 }
@@ -265,43 +270,50 @@ class Tests: XCTestCase {
             return
         }
         
-        let pushExpectation = XCTestExpectation(description: "pushing after view controller onto before view controller")
-        let popExpectation = XCTestExpectation(description: "dismissing after view controller to show before view controller")
+        let pushExpectation = XCTestExpectation(description: "wait for push controller fail")
+        let popExpectation = XCTestExpectation(description: "wait for pop controller fail")
         if let transNav = self.navigationController {
-            transNav.pushViewController(viewController:afterVC, animated: true, completion: {
+
+            //push after VC on the stack and check to see if the push was successful
+            transNav.pushViewController(afterVC, animated: true)
+            let transDelay: Double = self.animationDuration + self.fadeDuration + 0.1
+            var transWaitTill: DispatchTime = .now() + transDelay
+            
+            DispatchQueue.main.asyncAfter(deadline: transWaitTill) {
                 pushExpectation.fulfill()
-                guard let curTopVC = self.navigationController?.topViewController else {
-                    XCTFail("error, trans button did not push the new VC onto the stack")
+            }
+            wait(for: [pushExpectation], timeout: transDelay+1.0)
+            guard let curTopVC = self.navigationController?.topViewController else {
+                XCTFail("error, trans button did not push the new VC onto the stack")
+                return
+            }
+            XCTAssertEqual(afterVC, curTopVC, "the after VC was not pushed on top of the before VC")
+            //pop afterVC off the stack and check to see if we have the view controller we expect with the layouts we expect
+            transWaitTill = .now() + transDelay
+            let popedVC = transNav.popViewController(animated: true)
+            DispatchQueue.main.asyncAfter(deadline: transWaitTill) {
+                popExpectation.fulfill()
+            }
+            wait(for: [popExpectation], timeout: transDelay+1.0)
+            
+            //after transision, check to see if the views still have the same autolayouts
+            guard let showingVC = self.navigationController?.topViewController as? GeneralBeforeViewController else {
+                XCTFail("error, top vc was nil after pop of after transition view controller, not executing rest of tests for this block, but should have been caught in setup func")
+                return
+            }
+            let afterAnimationAllLayouts = self.getAllLayouts(vc:showingVC)
+            for (curView, beforeLayouts) in beforeAnimationAllLayouts {
+                print("curview is:\(curView)  constraints:\(curView.constraints)")
+                guard let afterLayouts = afterAnimationAllLayouts[curView] else {
+                    XCTFail("Error: a view that existed before the animations no longer exists after")
                     return
                 }
-                XCTAssertEqual(afterVC, curTopVC, "the after VC was not pushed on top of the before VC")
-                
-                //pop view controller
-                let popedVC = transNav.popViewController(animated: true, completion: {
-                    //after transision, check to see if the views still have the same autolayouts
-                    guard let showingVC = self.navigationController?.topViewController as? GeneralBeforeViewController else {
-                        XCTFail("error, top vc was nil after pop of after transition view controller, not executing rest of tests for this block, but should have been caught in setup func")
-                        return
-                    }
-                    
-                    
-                    let afterAnimationAllLayouts = self.getAllLayouts(vc:showingVC)
-                    for (curView, beforeLayouts) in beforeAnimationAllLayouts {
-                        guard let afterLayouts = afterAnimationAllLayouts[curView] else {
-                            XCTFail("Error: a view that existed before the animations no longer exists after")
-                            return
-                        }
-                        XCTAssertEqual(beforeLayouts, afterLayouts, "before layouts don't match after layouts")
-                    }
-                    popExpectation.fulfill()
-                })
-                
-                //check if poped vc was the vc we pushed
-                XCTAssertEqual(afterVC, popedVC, "poped vc is not the vc we pushed onto the nav controller")
-            })
+                XCTAssertEqual(beforeLayouts, afterLayouts, "before layouts don't match after layouts")
+            }
             
-            wait(for: [pushExpectation], timeout: 5.0)
-            wait(for: [popExpectation], timeout: 10.0)
+            //check if poped vc was the vc we pushed
+            XCTAssertEqual(afterVC, popedVC, "poped vc is not the vc we pushed onto the nav controller")
+
         }
     }
     
@@ -377,12 +389,10 @@ class Tests: XCTestCase {
     fileprivate func transverseViews (view:UIView, doWork:@escaping ((UIView) -> Void)) {
         if (!(view is UINavigationBar)) {
             doWork(view)
+            for curView in view.subviews {
+                transverseViews(view: curView, doWork: doWork)
+            }
         }
-        
-        for curView in view.subviews {
-            transverseViews(view: curView, doWork: doWork)
-        }
-        
     }
     
     

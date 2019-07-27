@@ -156,10 +156,13 @@
                                     <constraint firstAttribute="height" constant="219" id="kYt-Md-Fv5"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2z-zE-CEW">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2z-zE-CEW">
                                 <rect key="frame" x="242" y="801" width="136" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.01176470588" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="136" id="0A0-9H-ewE"/>
+                                    <constraint firstAttribute="height" constant="53" id="9Ag-Tj-gas"/>
+                                </constraints>
                                 <state key="normal" title="Code Push">
                                     <color key="titleColor" red="0.99991279840000002" green="1" blue="0.99988144639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -171,11 +174,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="7ld-fh-x01" firstAttribute="bottom" secondItem="CDX-2x-3zT" secondAttribute="bottom" id="AVH-zx-l0i"/>
+                            <constraint firstItem="7ld-fh-x01" firstAttribute="trailing" secondItem="f2z-zE-CEW" secondAttribute="trailing" constant="36" id="Em0-eu-ER9"/>
                             <constraint firstItem="CDX-2x-3zT" firstAttribute="top" secondItem="EBE-A0-iND" secondAttribute="bottom" constant="20" id="OTR-mx-W1Q"/>
                             <constraint firstItem="RFg-ql-4PA" firstAttribute="top" secondItem="7ld-fh-x01" secondAttribute="top" constant="74" id="dGY-T0-pmS"/>
                             <constraint firstItem="7ld-fh-x01" firstAttribute="trailing" secondItem="EcQ-rP-ZcF" secondAttribute="trailing" constant="20" id="hJq-CO-kxL"/>
                             <constraint firstItem="RFg-ql-4PA" firstAttribute="leading" secondItem="7ld-fh-x01" secondAttribute="leading" constant="20" id="ijS-2s-QMB"/>
                             <constraint firstItem="EBE-A0-iND" firstAttribute="leading" secondItem="7ld-fh-x01" secondAttribute="leading" constant="20" id="lb8-EY-bj9"/>
+                            <constraint firstItem="7ld-fh-x01" firstAttribute="bottom" secondItem="f2z-zE-CEW" secondAttribute="bottom" constant="8" id="tqz-Xe-Ird"/>
                             <constraint firstItem="CDX-2x-3zT" firstAttribute="top" secondItem="EcQ-rP-ZcF" secondAttribute="bottom" constant="20" id="wlc-no-Gwo"/>
                             <constraint firstItem="CDX-2x-3zT" firstAttribute="centerX" secondItem="dQB-rU-3GT" secondAttribute="centerX" constant="-99.5" id="zMl-vG-KwJ"/>
                         </constraints>
